@@ -11,11 +11,11 @@ namespace NetCoreDemo.Cookie.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
-
         [Authorize]
         public IActionResult MyClaims()
         {

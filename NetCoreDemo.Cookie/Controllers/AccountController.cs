@@ -10,6 +10,7 @@ namespace NetCoreDemo.Cookie.Controllers
 {
     public class AccountController : Controller
     {
+
         [HttpGet]
         public IActionResult Login(string returnUrl = null)
         {
