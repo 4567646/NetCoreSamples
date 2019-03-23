@@ -1,0 +1,196 @@
+﻿@{
+    ViewData["Title"] = "LF.Demo";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap-3.3.7/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/css/font-awesome.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/css/ionicons.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/css/AdminLTE.css">
+    <link rel="stylesheet" href="~/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap-3.3.7/css/bootstrap-table.css">
+    <link rel="stylesheet" href="~/lib/jquery/jquery.treegrid.css">
+    <link rel="stylesheet" href="~/css/myCommon.css">
+    <link rel="stylesheet" href="~/lib/bootstrap-3.3.7/css/bootstrap-tab.css">
+
+    <!-- jQuery 3 -->
+    <script src="~/lib/jquery/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/lib/bootstrap-3.3.7/js/bootstrap.js"></script>
+    <script src="~/lib/bootstrap-3.3.7/js/bootstrap-table.js"></script>
+    <script src="~/lib/bootstrap-3.3.7/js/bootstrap-table-zh-CN.js"></script>
+    <script src="~/lib/bootstrap-3.3.7/js/bootstrap-table-treegrid.js"></script>
+    <script src="~/lib/jquery/jquery.treegrid.min.js"></script>
+    <script src="~/lib/bootstrap-3.3.7/js/bootstrap-tab.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/js/adminlte.js"></script>
+</head>
+<body class="hold-transition skin-blue fixed sidebar-mini">
+    <!--========================加载头部组件========================-->
+    @await Component.InvokeAsync("Head")
+    <!--========================加载侧边栏导航组件==================-->
+    @await Component.InvokeAsync("LeftNavigation", 1)
+    <!--@await Component.InvokeAsync("LeftNavigation",2)-->
+    <!--========================页面内容 Start======================-->
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content container-fluid">
+            <div id="container">
+            </div>
+            <!--------------------------
+            | Your Page Content Here |
+            -------------------------->
+
+        </section>
+    </div>
+    <!--========================页面内容 End========================-->
+    <!-- =======================内容页导航==========================-->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-stats-tab" data-toggle="tab"><i class="fa fa-stumbleupon"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="pull-right-container">
+                                    <span class="label label-danger pull-right">70%</span>
+                                </span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">
+                <header>Stats Tab Content</header>
+                <small>go go go,rocking roll!</small>
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <div class="control-sidebar-bg"></div>
+
+    <!--=======================Footer Start=========================-->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Anything you want
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    </footer>
+    <!--======================Footer End============================-->
+
+
+    <!--======================Script Start==========================-->
+    <script>
+
+        $("#container").tabs({
+            data: [
+                {
+                    id: 'Welcome',
+                    text: '首页',
+                    url: "Home/Welcome"
+                }],
+            showIndex: 0,
+            loadAll: false
+        });
+
+        $(function () {
+            $('ul.sidebar-menu li').click(function () {
+                var li = $('ul.sidebar-menu li.active');
+                li.removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('.myLeftMenu').click(function (e) {
+
+                var url = $(this).attr('data');
+                var dataid = $(this).attr('data-id');
+                var datatext = $(this).text();
+                console.log(url);
+                var $tabContainer = $('#container');
+                var $tabId = $tabContainer.data('tabs').find(datatext);
+
+                if ($tabId.length > 0) {
+                    console.log("find:" + $tabId);
+                    $tabContainer.data('tabs').showTab(datatext);
+                }
+                else {
+                    console.log("no find");
+                    $("#container").data("tabs").addTab({ id: datatext, text: datatext, closeable: true, url: url });
+                }
+
+            });
+
+        })
+
+    </script>
+    <!--======================Script End============================-->
+</body>
+</html>
