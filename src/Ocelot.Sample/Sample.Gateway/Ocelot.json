@@ -1,0 +1,27 @@
+{
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/apiservice/{controller}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/apiservice/{controller}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "host": "localhost",
+          "port": 5011
+        },
+        {
+          "host": "localhost",
+          "port": 5012
+        }
+      ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}
