@@ -1,18 +1,19 @@
 {
   "ReRoutes": [
     {
-      "UpstreamPathTemplate": "/apiservice/{controller}",
+      "UpstreamPathTemplate": "/api/{controller}",
       "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/apiservice/{controller}",
+      "DownstreamPathTemplate": "/api/{controller}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
+          //"host": "node01",
           "host": "localhost",
-          "port": 5011
+          "port": 5001
         },
         {
           "host": "localhost",
-          "port": 5012
+          "port": 5002
         }
       ],
       "LoadBalancerOptions": {
