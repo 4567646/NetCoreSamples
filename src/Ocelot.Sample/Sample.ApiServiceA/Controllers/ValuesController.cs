@@ -20,7 +20,7 @@ namespace Sample.ApiServiceA.Controllers
         [HttpGet]
         public string Get()
         {
-            return HttpContext.Request.Host.Port + "" + _configuration["AppName"] + "" + DateTime.Now.ToString();
+            return $"prot={HttpContext.Request.Host.Port} appName={ _configuration["AppName"]}  thisTime={DateTime.Now.ToString()}";
         }
 
 
