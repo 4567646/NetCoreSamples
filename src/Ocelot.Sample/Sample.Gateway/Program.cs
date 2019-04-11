@@ -17,7 +17,6 @@ namespace Sample.Gateway
                 {
                     builder.SetBasePath(contex.HostingEnvironment.ContentRootPath).AddJsonFile("Ocelot.json");
                 })
-            //.UseUrls("http://localhost:5000")
             .UseStartup<Startup>();
     }
 }

@@ -3,4 +3,4 @@ WORKDIR /app/api.a
 COPY . .
 #EXPOSE 80
 
-ENTRYPOINT ["dotnet", "Sample.ApiServiceA.dll"]
+ENTRYPOINT ["dotnet", "Sample.Api.dll"]

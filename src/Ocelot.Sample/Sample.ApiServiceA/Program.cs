@@ -12,7 +12,6 @@ namespace Sample.ApiServiceA
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                //.UseUrls("http://localhost:5003")
                 .UseStartup<Startup>();
     }
 }
