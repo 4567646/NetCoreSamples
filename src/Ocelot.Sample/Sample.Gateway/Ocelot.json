@@ -1,0 +1,28 @@
+{
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/api/{controller}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/{controller}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          //"host": "node01",
+          "host": "localhost",
+          "port": 5001
+        },
+        {
+          "host": "localhost",
+          "port": 5002
+        }
+      ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}
