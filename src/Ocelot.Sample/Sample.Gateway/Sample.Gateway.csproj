@@ -13,6 +13,12 @@
     <PackageReference Include="Ocelot" Version="13.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
   <ProjectExtensions><VisualStudio><UserProperties ocelot_1json__JsonSchema="http://json.schemastore.org/appsettings" /></VisualStudio></ProjectExtensions>
 
 </Project>
