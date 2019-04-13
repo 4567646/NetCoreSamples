@@ -15,7 +15,9 @@ namespace Sample.Gateway
             WebHost.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((contex, builder) =>
                 {
-                    builder.SetBasePath(contex.HostingEnvironment.ContentRootPath).AddJsonFile("Ocelot.json");
+                    //builder.SetBasePath(contex.HostingEnvironment.ContentRootPath).AddJsonFile("Ocelot.json");
+                    //builder.SetBasePath(contex.HostingEnvironment.ContentRootPath).AddJsonFile("Ocelot.json");
+                    builder.AddJsonFile($"appsettings.{contex.HostingEnvironment.EnvironmentName}.json", optional: true);
                 })
             .UseStartup<Startup>();
     }

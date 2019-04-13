@@ -1,13 +1,14 @@
 ﻿{
-  "Sample.ApiServiceA": {
-    "commandName": "Project",
-    "launchBrowser": true,
-    "launchUrl": "api/values",
-    "applicationUrl": "http://localhost:6000",
-    "environmentVariables": {
-      "ASPNETCORE_ENVIRONMENT": "Development"
-    },
-    "sslPort": 0
+  "profiles": {
+    "Sample.ApiServiceA": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "applicationUrl": "http://localhost:6000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sslPort": 0
+    }
   }
-
 }
