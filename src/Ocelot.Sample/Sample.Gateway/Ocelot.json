@@ -7,15 +7,15 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "host": "192.168.1.107",
+          "host": "localhost",
           "port": 5001
         },
         {
-          "host": "192.168.1.107",
+          "host": "localhost",
           "port": 5002
         },
         {
-          "host": "192.168.1.107",
+          "host": "localhost",
           "port": 5003
         }
       ],
@@ -26,6 +26,6 @@
   ],
 
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000"
+    "BaseUrl": "https://localhost:5000"
   }
 }

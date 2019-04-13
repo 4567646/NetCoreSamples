@@ -32,7 +32,6 @@ namespace Sample.Gateway
                 app.UseDeveloperExceptionPage();
             }
             app.UseOcelot().Wait();
-            app.UseHttpsRedirection();
 
             app.UseMvc();
         }
