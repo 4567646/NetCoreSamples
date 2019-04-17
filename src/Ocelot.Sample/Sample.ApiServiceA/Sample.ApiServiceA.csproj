@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <AssemblyName>Sample.Api</AssemblyName>
-    <RootNamespace>Sample.Api</RootNamespace>
+    <AssemblyName>Sample.ApiServiceA</AssemblyName>
+    <RootNamespace>Sample.ApiServiceA</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

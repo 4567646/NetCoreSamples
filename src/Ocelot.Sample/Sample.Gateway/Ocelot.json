@@ -8,13 +8,13 @@
       "DownstreamHostAndPorts": [
         {
           "host": "localhost",
-          "port": 5001
+          "port": 8081
+        },
+		{
+          "host": "localhost",
+          "port": 8082
         }
       ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "TestKey",
-        "AllowedScopes": []
-      },
       "LoadBalancerOptions": {
         "Type": "LeastConnection"
       }

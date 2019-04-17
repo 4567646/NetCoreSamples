@@ -2,6 +2,7 @@
 bin
 obj 
 .vs 
+publish
 
 #忽略文件
 *.dll //忽略以.iml结尾的文件
