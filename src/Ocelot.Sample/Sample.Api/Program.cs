@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Sample.ApiServiceA
+namespace Sample.Api
 {
     public class Program
     {

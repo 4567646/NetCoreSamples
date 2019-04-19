@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <AssemblyName>Sample.ApiServiceA</AssemblyName>
-    <RootNamespace>Sample.ApiServiceA</RootNamespace>
+    <AssemblyName>Sample.Api</AssemblyName>
+    <RootNamespace>Sample.Api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

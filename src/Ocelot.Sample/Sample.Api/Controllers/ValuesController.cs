@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
-namespace Sample.ApiServiceB.Controllers
+namespace Sample.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -22,5 +19,7 @@ namespace Sample.ApiServiceB.Controllers
         {
             return $"prot={HttpContext.Request.Host.Port} appName={ _configuration["AppName"]}  thisTime={DateTime.Now.ToString()}";
         }
+
+
     }
 }
