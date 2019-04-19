@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using IdentityServer4.EntityFramework.DbContexts;
+using IdentityServer4.EntityFramework.Mappers;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using System.Linq;
+using System.Reflection;
 
 namespace Sample.Gateway
 {
@@ -31,11 +36,10 @@ namespace Sample.Gateway
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseOcelot();
+            app.UseOcelot().Wait();
 
             app.UseMvc();
         }
 
-       
     }
 }
